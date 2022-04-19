@@ -1,0 +1,9 @@
+[Unit]
+Description=Merge Xresources
+Documentation=man:xrdb(1)
+PartOf=gui-session.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/sleep 5
+ExecStart=/bin/sh -c "/usr/bin/xrdb -merge $HOME/.Xresources"

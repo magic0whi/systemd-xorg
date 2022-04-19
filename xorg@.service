@@ -1,0 +1,19 @@
+[Unit]
+Description=Xorg server at display %i
+Documentation=man:xorg(1)
+Requires=xorg@%i.socket
+After=xorg@%i.socket
+Before=gui-session-pre.target gui-session.target
+Wants=gui-session-pre.target gui-session.target
+
+[Service]
+Slice=session.slice
+SuccessExitStatus=0 1
+Environment=DISPLAY=:%i
+# Set environment with 'systemctl --user set-environment XDG_VTNR=1'
+#ExecStart=/usr/bin/Xorg ${DISPLAY} -nolisten tcp -noreset -verbose 2 "vt${XDG_VTNR}"
+ExecStart=/usr/bin/Xorg ${DISPLAY} -nolisten tcp -noreset -verbose 2 "vt1"
+
+[Install]
+Also=xorg@%i.socket
+WantedBy=default.target

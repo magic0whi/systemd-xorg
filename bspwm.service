@@ -1,0 +1,15 @@
+[Unit]
+Description=X Window Manager (bspwm)
+Documentation=man:bspwm(1)
+PartOf=gui-session.target
+Conflicts=window-manager.service
+
+[Service]
+Slice=session.slice
+ExecStartPre=/usr/bin/sleep 5
+ExecStart=/usr/bin/bspwm
+ExecStop=/usr/bin/bspc quit
+ExecRestart=/usr/bin/bspc wm -r
+
+[Install]
+Alias=window-manager.service
