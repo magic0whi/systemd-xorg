@@ -1,7 +1,5 @@
 [Unit]
 Description=GUI Session
-After=graphical-session-pre.target
-Wants=window-manager.service
-Wants=xrdb.service
-Wants=xdg-desktop-autostart.target
+After=gui-session-pre.target
+#Wants=xdg-desktop-autostart.target
 RefuseManualStart=yes
