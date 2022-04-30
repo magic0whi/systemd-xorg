@@ -19,3 +19,4 @@ ExecStart=/bin/sh -c 'trap "/usr/bin/systemd-notify --status=Listening... --read
 [Install]
 Also=xorg@%i.socket
 WantedBy=default.target
+RequiredBy=gui-session-pre.target
