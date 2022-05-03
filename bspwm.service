@@ -12,7 +12,7 @@ Slice=session.slice
 EnvironmentFile=%h/.config/systemd/user/bspwm.env
 ExecStart=/usr/bin/bspwm
 ExecStop=/usr/bin/bspc quit
-ExecReload=/usr/bin/sh -c '/usr/bin/bspc wm -r'
+ExecReload=/usr/bin/bspc wm -r
 
 [Install]
 WantedBy=gui-session-pre.target

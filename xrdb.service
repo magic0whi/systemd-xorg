@@ -6,7 +6,7 @@ PartOf=gui-session.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/sh -c "/usr/bin/xrdb -merge $HOME/.Xresources"
+ExecStart=/usr/bin/xrdb -merge ${HOME}/.Xresources
 
 [Install]
 WantedBy=gui-session.target
