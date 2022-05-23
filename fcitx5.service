@@ -1,0 +1,11 @@
+[Unit]
+Description=Flexible Context-aware Input Tool with eXtension
+After=gui-session.target
+PartOf=gui-session.target
+
+[Service]
+ExecStart=/usr/bin/fcitx5
+
+[Install]
+WantedBy=gui-session.target
+
