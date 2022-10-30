@@ -1,0 +1,12 @@
+[Unit]
+Description=STAnd-aLONE sysTRAY. It has minimal build and run-time dependencies: the Xlib only
+Documentation=man:stalonetray(1)
+After=gui-session.target
+PartOf=gui-session.target
+
+[Service]
+ExecStart=/usr/bin/stalonetray
+
+[Install]
+WantedBy=gui-session.target
+

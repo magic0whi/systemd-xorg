@@ -1,0 +1,11 @@
+[Unit]
+Description=Cross-platform V2ray Client written in Qt (Stable Release)
+After=gui-session.target
+PartOf=gui-session.target
+
+[Service]
+ExecStart=/usr/bin/qv2ray
+
+[Install]
+WantedBy=gui-session.target
+
