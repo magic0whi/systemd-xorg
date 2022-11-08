@@ -1,6 +1,6 @@
 #!/bin/sh
 
-a1=('bspwm.env' 'bspwm.service' 'fcitx5.service' 'gui-session.target' 'gui-session-pre.target' 'picom.service' 'polybar.service' 'qv2ray.service' 'redshift.service' 'stalonetray.service' 'xorg@.service' 'xorg@.socket')
+a1=('bspwm.env' 'bspwm.service' 'fcitx5.service' 'gui-session.target' 'gui-session-pre.target' 'picom.service' 'polybar.service' 'qv2ray.service' 'redshift.service' 'xorg@.service' 'xorg@.socket')
 a2="${HOME}/.config/systemd/user"
 
 if [ ! -d ${a2} ]; then

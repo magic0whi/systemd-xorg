@@ -8,6 +8,8 @@ Wants=gui-session.target
 PartOf=gui-session.target
 
 [Service]
+Type=notify
+NotifyAccess=all
 Slice=session.slice
 EnvironmentFile=%h/.config/systemd/user/bspwm.env
 ExecStart=/usr/bin/bspwm
